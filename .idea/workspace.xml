@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39e53d4a-863c-4e42-8bed-cc818306a48a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/login.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/login.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.page.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/service/cognito-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/service/cognito-service.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/sign-up/sign-up.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/sign-up/sign-up.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/sign-up/sign-up.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/sign-up/sign-up.page.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/dist/" />
@@ -21,7 +17,41 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/login/login.page.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="38" column="79" lean-forward="true" selection-start-line="38" selection-start-column="79" selection-end-line="38" selection-end-column="79" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/service/cognito-service.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="139" column="21" selection-start-line="139" selection-start-column="13" selection-end-line="139" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/login/login.page.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="90" column="32" selection-start-line="90" selection-start-column="32" selection-end-line="90" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -31,6 +61,7 @@
       <find>verifyUser</find>
       <find>confirmUser</find>
       <find>cognitoUser</find>
+      <find>confirmPassword</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -40,19 +71,19 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/app/app-routing.module.ts" />
-        <option value="$PROJECT_DIR$/src/app/login/login.page.ts" />
-        <option value="$PROJECT_DIR$/src/app/login/login.page.html" />
-        <option value="$PROJECT_DIR$/src/app/service/cognito-service.service.ts" />
         <option value="$PROJECT_DIR$/src/app/sign-up/sign-up.page.ts" />
         <option value="$PROJECT_DIR$/src/app/sign-up/sign-up.page.html" />
+        <option value="$PROJECT_DIR$/src/app/login/login.page.html" />
+        <option value="$PROJECT_DIR$/src/app/service/cognito-service.service.ts" />
+        <option value="$PROJECT_DIR$/src/app/login/login.page.ts" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="72" />
-    <option name="y" value="452" />
-    <option name="width" value="1937" />
-    <option name="height" value="1057" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-69" />
+    <option name="y" value="457" />
+    <option name="width" value="1938" />
+    <option name="height" value="1058" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -78,6 +109,13 @@
               <item name="ionic-cognito-app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ionic-cognito-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ionic-cognito-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ionic-cognito-app" type="b2602c69:ProjectViewProjectNode" />
@@ -180,14 +218,16 @@
       <workItem from="1554426785767" duration="208000" />
       <workItem from="1554428617598" duration="155000" />
       <workItem from="1554604930866" duration="10987000" />
+      <workItem from="1554624691182" duration="6133000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34641000" />
+    <option name="totallyTimeSpent" value="40774000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22192867" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -204,7 +244,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="TypeScript" order="9" weight="0.12464589" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.2917847" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.16288953" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -224,20 +264,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="5" column="45" lean-forward="true" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/login/login.page.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/login/login.page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="32" column="89" selection-start-line="32" selection-start-column="89" selection-end-line="32" selection-end-column="89" />
         </state>
       </provider>
     </entry>
@@ -268,28 +294,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/login/login.page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="38" column="79" lean-forward="true" selection-start-line="38" selection-start-column="79" selection-end-line="38" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/sign-up/sign-up.page.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+        <state relative-caret-position="-883">
+          <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
-            <element signature="n#!!block;n#promptVerificationCode#0;n#SignUpPage#0" />
-            <element signature="n#!!block;n#promptVerificationCodeButton#0;n#SignUpPage#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/login/login.page.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="90" column="32" selection-start-line="90" selection-start-column="32" selection-end-line="90" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/service/cognito-service.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="38" column="15" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="15" />
+        <state relative-caret-position="45">
+          <caret line="139" column="21" selection-start-line="139" selection-start-column="13" selection-end-line="139" selection-end-column="21" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
-            <element signature="n#!!block;n#signUp#0;n#CognitoServiceService#0" />
-            <element signature="n#!!block;n#confirmUser#0;n#CognitoServiceService#0" />
-            <element signature="n#!!block;n#authenticate#0;n#CognitoServiceService#0" />
-            <element signature="n#!!block;n#resendConfirmationCode#0;n#CognitoServiceService#0" />
           </folding>
         </state>
       </provider>

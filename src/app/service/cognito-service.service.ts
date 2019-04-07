@@ -97,6 +97,7 @@ export class CognitoServiceService {
         });
     }
 
+
     resendEmailConfirmationCode(userName){
         return new Promise((resolved, reject) => {
             const userPool = new AWSCognito.CognitoUserPool(this._POOL_DATA);
@@ -116,4 +117,40 @@ export class CognitoServiceService {
         });
     }
 
+
+    forgetPsw(userName){
+        return new Promise((resolved, reject) => {
+            const userPool = new AWSCognito.CognitoUserPool(this._POOL_DATA);
+            const cognitoUser = new AWSCognito.CognitoUser({
+                Username: userName,
+                Pool: userPool
+            });
+            cognitoUser.forgotPassword({
+                onSuccess: function (data) {
+                    // successfully initiated reset password request
+                    console.log('CodeDeliveryData from forgotPassword: ' + data);
+                },
+                onFailure: function(err) {
+                    alert(err.message || JSON.stringify(err));
+                }
+            });
+        });
+    }
+
+    resetPsw(userName,verificationCode,newPassword){
+        const userPool = new AWSCognito.CognitoUserPool(this._POOL_DATA);
+        const cognitoUser = new AWSCognito.CognitoUser({
+            Username: userName,
+            Pool: userPool
+        });
+        cognitoUser.confirmPassword(verificationCode, newPassword, {
+            onSuccess() {
+                console.log('Password confirmed!');
+            },
+            onFailure: function(err) {
+                console.log('Password not confirmed!');
+                console.log(err);
+            }
+        });
+    }
 }
