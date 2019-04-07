@@ -1,5 +1,8 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>sign_up</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,7 +16,19 @@
           <ion-list inset>
 
             <ion-item>
-              <ion-input type="text" placeholder="Email" name="email" [(ngModel)]="email" required></ion-input>
+              <ion-input type="text" placeholder="Given Name" name="given_name" [(ngModel)]="given_name" required></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-input type="text" placeholder="Family Name" name="family_name" [(ngModel)]="family_name" required></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-input type="tel" placeholder="Phone Number +640215878911" name="phone_number" [(ngModel)]="phone_number" required></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-input type="email" placeholder="Email" name="email" [(ngModel)]="email" required></ion-input>
             </ion-item>
 
             <ion-item >
@@ -29,6 +44,13 @@
           <button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">Register</button>
         </ion-col>
       </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <button ion-button (click)="promptVerificationCodeButton()" >Verify Code</button>
+        </ion-col>
+      </ion-row>
+
     </form>
   </div>
 </ion-content>

@@ -7,19 +7,22 @@ import * as AWSCognito from 'amazon-cognito-identity-js';
 export class CognitoServiceService {
 
     _POOL_DATA = {
-        UserPoolId: 'ap-southeast-2_P1OCldnUA',
-        ClientId: '1dh05sdts91e2sgnn1g2t4k4k6'
+        UserPoolId: 'ap-southeast-2_IY6zAveNv',
+        ClientId: 'dfspm7ich3btospn80rsigog0'
     };
 
   constructor() { }
 
-    signUp(email, password) {
+    signUp(email, password, given_name, family_name, phone_number) {
         return new Promise((resolved, reject) => {
             const userPool = new AWSCognito.CognitoUserPool(this._POOL_DATA);
 
             const userAttribute = [];
             userAttribute.push(
-                new AWSCognito.CognitoUserAttribute({ Name: 'email', Value: email })
+                new AWSCognito.CognitoUserAttribute({ Name: 'email', Value: email }),
+                new AWSCognito.CognitoUserAttribute({ Name: 'given_name', Value: given_name }),
+                new AWSCognito.CognitoUserAttribute({ Name: 'family_name', Value: family_name }),
+                new AWSCognito.CognitoUserAttribute({ Name: 'phone_number', Value: phone_number })
             );
 
             userPool.signUp(email, password, userAttribute, null, function(err, result) {
@@ -89,6 +92,25 @@ export class CognitoServiceService {
                             reject(error);
                         }
                     });
+                }
+            });
+        });
+    }
+
+    resendEmailConfirmationCode(userName){
+        return new Promise((resolved, reject) => {
+            const userPool = new AWSCognito.CognitoUserPool(this._POOL_DATA);
+
+            const cognitoUser = new AWSCognito.CognitoUser({
+                Username: userName,
+                Pool: userPool
+            });
+
+            cognitoUser.resendConfirmationCode(function(err, result) {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolved(result);
                 }
             });
         });

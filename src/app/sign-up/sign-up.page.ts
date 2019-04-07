@@ -10,6 +10,9 @@ import { AlertController } from '@ionic/angular';
 export class SignUpPage implements OnInit {
     email: string;
     password: string;
+    phone_number: number;
+    family_name: string;
+    given_name: string;
 
   constructor(public CognitoService: CognitoServiceService,
               public alertController: AlertController) { }
@@ -18,7 +21,7 @@ export class SignUpPage implements OnInit {
   }
 
     register() {
-        this.CognitoService.signUp(this.email, this.password).then(
+        this.CognitoService.signUp(this.email, this.password, this.given_name, this.family_name, this.phone_number).then(
             res => {
                 console.log(res);
                 this.promptVerificationCode();
@@ -66,6 +69,43 @@ export class SignUpPage implements OnInit {
                 alert(err.message);
             }
         );
+    }
+
+    async promptVerificationCodeButton(){
+        const alert = await this.alertController.create({
+            header: 'Enter Verfication Email & Code',
+            inputs: [
+                {
+                    name: 'EmailAddress',
+                    placeholder: 'Email Address'
+                },
+            ],
+            buttons: [
+                {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    handler: data => {
+                        console.log('Cancel clicked');
+                    }
+                },
+                {
+                    text: 'Continue',
+                    handler: data => {
+                        this.email=data.EmailAddress
+                        this.CognitoService.resendEmailConfirmationCode(this.email).then(
+                            res => {
+                                console.log(res);
+                                this.promptVerificationCode();
+                            },
+                            err => {
+                                console.log(err);
+                            }
+                        );
+                    }
+                }
+            ]
+        });
+        await alert.present();
     }
 
 }
