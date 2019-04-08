@@ -55,7 +55,7 @@ export class LoginPage implements OnInit {
                 {
                     text: 'Continue',
                     handler: data => {
-                        this.email=data.EmailAddress;
+                        this.email = data.EmailAddress;
                         this.CognitoSerive.forgetPsw(this.email)
                         this.openforgetPswStep2();
                     }
@@ -90,7 +90,7 @@ export class LoginPage implements OnInit {
                 {
                     text: 'Reset',
                     handler: data => {
-                        this.CognitoSerive.resetPsw(this.email,data.verificationCode,data.newPwd)
+                        this.CognitoSerive.resetPsw(this.email, data.verificationCode, data.newPwd);
                     }
                 }
             ]

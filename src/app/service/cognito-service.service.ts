@@ -98,7 +98,7 @@ export class CognitoServiceService {
     }
 
 
-    resendEmailConfirmationCode(userName){
+    resendEmailConfirmationCode(userName) {
         return new Promise((resolved, reject) => {
             const userPool = new AWSCognito.CognitoUserPool(this._POOL_DATA);
 
@@ -118,7 +118,7 @@ export class CognitoServiceService {
     }
 
 
-    forgetPsw(userName){
+    forgetPsw(userName) {
         return new Promise((resolved, reject) => {
             const userPool = new AWSCognito.CognitoUserPool(this._POOL_DATA);
             const cognitoUser = new AWSCognito.CognitoUser({
@@ -137,7 +137,7 @@ export class CognitoServiceService {
         });
     }
 
-    resetPsw(userName,verificationCode,newPassword){
+    resetPsw(userName, verificationCode, newPassword) {
         const userPool = new AWSCognito.CognitoUserPool(this._POOL_DATA);
         const cognitoUser = new AWSCognito.CognitoUser({
             Username: userName,

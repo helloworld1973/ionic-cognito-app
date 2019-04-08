@@ -2,9 +2,11 @@
   <ion-toolbar>
     <ion-title>login</ion-title>
   </ion-toolbar>
+
 </ion-header>
 
 <ion-content padding>
+
   <form (ngSubmit)="login()" #registerForm="ngForm">
     <ion-row>
       <ion-col>
@@ -39,5 +41,12 @@
       <button ion-button class="submit-btn" full type="submit" (click)="openforgetPswStep1()">Forget Password</button>
     </ion-col>
   </ion-row>
+
+  <ion-row>
+    <ion-col>
+          <ion-button href="https://minierp.auth.ap-southeast-2.amazoncognito.com/login?response_type=code&client_id=dfspm7ich3btospn80rsigog0&redirect_uri=http://localhost:8100/sign-up">FB</ion-button>
+    </ion-col>
+  </ion-row>
+
 
 </ion-content>
